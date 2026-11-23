@@ -1,0 +1,10 @@
+{
+  "name": "austinjiang-v2",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check:secrets": "python3 scripts/check_secrets.py --history"
+  }
+}

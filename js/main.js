@@ -423,14 +423,6 @@
             return false;
         });
         
-        //Google Maps
-        $("#map").googleMap({
-            zoom: 15 // Google Map ZOOM. You can change this value
-        });
-        $("#map").addMarker({
-            address: "redacted", // Your Address. Change it
-        });
-
         scrollTop();
 
         skillsStyles();
