@@ -5827,3 +5827,5 @@ a.post-thumbnail:hover {
     z-index: 1;
   }
 }
+/* Privacy: keep the redacted location visible without loading map services. */
+.redacted-location { display: grid; place-items: center; font-size: 1.25rem; }

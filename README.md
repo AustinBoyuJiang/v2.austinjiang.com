@@ -1,14 +1,12 @@
-# austinjiang.com
- My personal website
+# Personal website
 
-Click the [link](https://austinjiang.com)
+This is a static website. Contact details and location are redacted, messaging is disabled, private resume downloads are removed, and no Google Maps API is loaded.
 
-## Local configuration and publishing
+## Local development and publishing
 
-1. Use Node.js 22 or later. Copy `.env.example` to `.env`.
-2. The default empty `GOOGLE_MAPS_API_KEY` uses a normal Google Maps link and makes no paid Maps API requests.
-3. If an interactive map is needed, create a new browser-only key restricted to your exact website domains and the Maps JavaScript API; set it in the local `.env`. A browser map key remains visible to website visitors even when supplied through `.env`. Never use a server or Gemini key here.
-4. Run `npm run build` and publish **only `dist/`**. Never serve the repository root or `.env` files. The build copies tracked website assets, not private environment files.
-5. In every new clone run `git config core.hooksPath .githooks`. The pre-commit hook rejects tracked dotenv files and credential literals; pre-push scans all reachable history. GitHub Actions repeats the scan.
+1. Use Node.js 22 or later.
+2. Run `npm run build` and publish only `dist/`. The build copies tracked website assets and excludes Git metadata, environment files and development tools. Environment credentials are not injected into browser scripts.
+3. Push changes to the connected Git repository for the existing Cloudflare deployment. No contact form, mail handler, or Google API integration is included in the static output.
+4. In each new clone run `git config core.hooksPath .githooks`. The hooks check credentials and the redacted contact surface. GitHub Actions repeats these checks.
 
-The old public credentials have been removed from this repository's reachable history. Rotate/revoke all previously exposed credentials; rewriting history cannot erase copies already downloaded or cached elsewhere.
+Rewriting Git history does not remove cached old commit URLs or other people's copies. Cache removal requests require the hosting provider's review.

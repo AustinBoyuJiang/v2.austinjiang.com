@@ -11,3 +11,6 @@ __pycache__/
 js/runtime-config.js
 node_modules/
 dist/
+
+# Resume originals may contain private contact details.
+files/resume/*.pdf

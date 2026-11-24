@@ -1,3 +1,2 @@
-// Safe default for viewing the source site. npm run build reads the local .env
-// and writes a separate generated version into the ignored dist/ directory.
+// Maps API integration is disabled for this site.
 window.AUSTIN_GOOGLE_MAPS_API_KEY = '';
